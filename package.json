@@ -1,0 +1,17 @@
+{
+  "name": "victoria",
+  "version": "1.0.0",
+  "description": "Portfolio",
+  "main": "victoria.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss victoria.css -w"
+  },
+  "author": "Vicky",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.13.1"
+  },
+  "dependencies": {
+    "jquery": "^3.4.1"
+  }
+}
