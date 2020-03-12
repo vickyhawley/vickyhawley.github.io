@@ -1,0 +1,38 @@
+.header {
+    height: 95vh;
+    background-image: linear-gradient(to right bottom, rgba($color-primary, 0.747), rgba($color-primary-light, 0.466)), url(/plswork.jpeg);
+    background-size: cover;
+    background-position: top;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    position: relative;
+
+    @include respond(phone) {
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    
+    }
+
+    &__logo-box {
+        position: absolute;
+        top: 4rem;
+        left: 4rem;
+    }
+    &__logo {
+        height: 8rem;
+        font-weight: 400;
+        color: $color-white;
+   }
+   &__text-box {
+    position: absolute;
+    top: 40%;
+    left: 54%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    }
+}
+
+
+i.fas {
+    color: $color-white;
+}
