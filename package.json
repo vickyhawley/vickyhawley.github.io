@@ -1,0 +1,30 @@
+{
+  "name": "victoria",
+  "version": "1.0.0",
+  "description": "Portfolio",
+  "main": "victoria.js",
+  "scripts": {
+    "watch:sass": "node-sass sass/main.scss victoria.css -w",
+    "devserver": "live-server",
+    "start": "npm-run-all --parallel devserver watch:sass",
+    "compile:sass": "node-sass sass/main.scss victoria.comp.css",
+    "concat:css": "concat -o victoria.concat.css victoria.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' victoria.concat.css -o victoria.prefix.css",
+    "compress:css": "node-sass victoria.prefix.css victoria.css --output-style compressed",
+    "build:css": "npm-run-all compile:sass concat:css prefix:css compress:css"
+  },
+  "author": "Vicky",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^9.7.4",
+    "concat": "^1.0.3",
+    "node-sass": "^4.13.1",
+    "nodemon": "^1.19.4",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^5.0.1"
+  },
+  "dependencies": {
+    "commander": "^4.1.1",
+    "jquery": "^3.4.1"
+  }
+}
